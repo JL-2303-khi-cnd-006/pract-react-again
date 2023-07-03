@@ -1,44 +1,27 @@
-import React, {useState} from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faCircleCheck, faPen, faTrashCan  
-} from '@fortawesome/free-solid-svg-icons'
 import './App.css';
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import Navbar from './Components/Navbar/Navbar';
+import Shop from './Pages/Shop';
+import Cart from './Pages/Cart';
 
 
 function App() {
 
-  const [todo, setTodo] = useState([
-    {"id": 1, "title": "Task 1", "status": false},
-    {"id": 2, "title": "Task 2", "status": false}
-  ]);
-
-  const [newTask, setNewTask] = useState('');
-  const [updateTask, setUpdateTask] = useState('');
-
-
-  const addTask = () => {
-
-  }
-
-  const deleteTask = (id) => {
-
-  }
-
-  const markDone = () => {
-
-  }
-
-
   return (
-    <div className="container App">
-
-      <br /> <br/>
-      <h2> To DO List App </h2>
+    <div className="App">
+      <Router>
+        <Navbar/>
+      <br />
+      <h2> * Grab Your Dream Mobile *</h2>
       <p> Let's Get Started </p>
-      <br /> 
-        {todo && todo.length ? '':'No Tasks...'}
+        <Routes>
+          <Route path="/"  element={<Shop/>}/>
+          <Route path="/cart" element={<Cart/>}/>
+        </Routes> 
+      </Router>
+       
     </div>
   );
 }
