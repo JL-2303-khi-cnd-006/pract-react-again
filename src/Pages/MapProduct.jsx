@@ -4,10 +4,15 @@ import './pages.css'
 const MapProduct = (props) => {
   const {id, title, description, price, image } = props.data
     return (
-    <div className='product-map'>
-        <h3>{title}</h3>
-        <p>{price}</p>
-        <p>{description}</p>
+
+        <div class="card" style={{width: '18rem'}} key={id}>
+             <img src={image} class="card-img-top" alt="..." />
+    <div class="card-body">
+            <h5 class="card-title">{title}</h5>
+            <p class="card-text">{description}</p>
+            <p>${price}</p>
+            <a href="/cart" class="btn btn-primary">Add to Cart</a>
+        </div>
     </div>
   )
 }

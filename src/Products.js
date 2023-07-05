@@ -1,7 +1,7 @@
 import Product1 from './assets/1.jpg'
 import Product2 from './assets/2.jpg'
 import Product3 from './assets/3.jpg'
-import Product4 from './assets/4.jpg'
+import Product4 from './assets/new4.jpg'
 
 export const Product = [
     {
@@ -15,7 +15,7 @@ export const Product = [
     {
         "id": 2,
         "title": "iPhone X",
-        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display",
         "price": 899,
         "image": Product2,
     },
@@ -30,8 +30,8 @@ export const Product = [
 
     {
         "id": 4,
-        "title": "OPPOF19",
-        "description": "OPPO F19 is officially announced on April 2021.",
+        "title": "Huawei P30",
+        "description": "Huawei P30 is officially announced on April 2021 and now the device has made its way to the UK.",
         "price": 280,
         "image": Product4,
     }

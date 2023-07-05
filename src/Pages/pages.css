@@ -1,7 +1,29 @@
-.product-map{
+.items-shop{
+    margin-bottom: 15px;
     display: grid;
     width: 100%;
     height: auto;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     place-items: center;
+}
+
+
+.product-map img {
+    width: 400px;
+}
+
+.product-map{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    width: 300px;
+    height: 350px;
+    margin: 100px;
+}
+
+.title-price{
+    padding-top: 15px;
+    text-align: center;
 }
