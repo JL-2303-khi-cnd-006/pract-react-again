@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './pages.css'
+import { ShopContext } from '../Content/ShopContent'
 
 const MapProduct = (props) => {
+  
   const {id, title, description, price, image } = props.data
+    const {addToCart, cartItems} = useContext(ShopContext)
+    const value = cartItems[id]
+    
+    
+    
     return (
 
         <div class="card" style={{width: '18rem'}} key={id}>
@@ -11,7 +18,9 @@ const MapProduct = (props) => {
             <h5 class="card-title">{title}</h5>
             <p class="card-text">{description}</p>
             <p>${price}</p>
-            <a href="/cart" class="btn btn-primary">Add to Cart</a>
+            <button class="btn btn-primary" onClick={() => addToCart(id)}>
+              Add to Cart {value > 0 && <> ({value}) </>}
+              </button>
         </div>
     </div>
   )

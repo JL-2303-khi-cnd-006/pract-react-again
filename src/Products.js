@@ -1,7 +1,7 @@
 import Product1 from './assets/1.jpg'
 import Product2 from './assets/2.jpg'
 import Product3 from './assets/3.jpg'
-import Product4 from './assets/new4.jpg'
+import Product4 from './assets/4.jpg'
 
 export const Product = [
     {
