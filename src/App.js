@@ -5,22 +5,27 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Navbar from './Components/Navbar/Navbar';
 import Shop from './Pages/Shop';
 import Cart from './Pages/Cart';
+import ShopContent from './Content/ShopContent';
 
 
 function App() {
 
   return (
-    <div className="App">
-      <Router>
-        <Navbar/>
-      <br />
-      <h2> * Grab Your Dream Mobile *</h2>
-      <p> Let's Get Started </p>
-        <Routes>
-          <Route path="/"  element={<Shop/>}/>
-          <Route path="/cart" element={<Cart/>}/>
-        </Routes> 
-      </Router>
+    <div>
+      <ShopContent>
+        <Router>
+          <Navbar/>
+            <br />
+            <div className='App'>
+              <h2> * Grab Your Dream Mobile *</h2>
+              <p> Let's Get Started </p>
+            </div>
+            <Routes>
+              <Route path="/"  element={<Shop/>}/>
+              <Route path="/cart" element={<Cart/>}/>
+            </Routes> 
+        </Router>
+      </ShopContent>
        
     </div>
   );
